@@ -6,7 +6,6 @@ import matplotlib.pyplot
 import agentframework
 import time
 import csv
-import sys
 
 start = time.time() # start time counter
 
