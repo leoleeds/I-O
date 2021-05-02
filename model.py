@@ -25,6 +25,11 @@ for row in reader:
     for value in row:
         rowlist.append(value)
 
+"""Verify that Environment has Imported Correctly"""
+
+matplotlib.pyplot.imshow(environment)
+matplotlib.pyplot.show()
+
 """Distance Between Agents"""
 
 def distance_between(agents_row_a, agents_row_b):
@@ -65,6 +70,15 @@ a = agentframework.Agent(environment, random.randint(0,99), random.randint(0,99)
 print(a.y, a.x) # show original agents
 a.move()
 print(a.y, a.x) # show moved agents
+
+"""Output to .CSV"""
+
+f2 = open('output.csv','w',newline='')
+writer = csv.writer(f2, delimiter = ' ')
+
+for row in environment:
+    writer.writerow(row)
+f2.close()
 
 
 """Check Timing"""
